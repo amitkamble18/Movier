@@ -9,8 +9,10 @@ html,body{
     height: 100%;
     font-family: Gilroy;
     background-color: #1e1e2a;
-    overflow-x: hidden;
+    
+
 }
+
 
 
 
@@ -23,33 +25,28 @@ html,body{
   }
 
 .main{
-    min-height: 100vh;
-    /* height: 100px; */
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+    margin-left: 90px;   /* push content after sidebar */
+    margin-top: 13vh;    /* push below navbar */
+
 }
 
-.navhor{
-
-   
-    
-    padding: 2vh;
-    color: #fff;
-    height: 13vh;
-    width: 100%; 
-    text-align: center;
+.navhor {
     position: fixed;
     top: 0;
-    left: 0;   
+    left: 90px;
+    width: calc(100% - 90px);
+    height: 13vh;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 100000;
-    background-color: var(--body-color);
-    opacity: 100%;
 
+    padding: 0 40px;
+    background-color: var(--body-color);
+    z-index: 1000;
 }
+
+
 
 .navleft{
     display: flex;
@@ -81,25 +78,38 @@ html,body{
 
 
 
-.logo{
-    color:var(--text-color);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    padding-left: 7rem;
-    padding-top: 2px;
+.logo {
     font-size: 3rem;
+    color: var(--text-color);
+    font-weight: bold;
 }
 
-.navvar{
+.navvar {
     position: fixed;
+    left: 0;
+    top: 0;
+    width: 90px;
     height: 100vh;
-    background-color:var(--body-color);
-    width: 11vh;
+
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: right;
-    z-index: 99999;
-    
+
+    background-color: var(--body-color);
+    z-index: 1000;
 }
+
+
+/*  parent icons */
+.parent-icons {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+
 
 .nav-link{
     display: flex;
@@ -129,40 +139,39 @@ html,body{
     height: 100%;
     width: 100%;
 }
-.hero{
-  width: calc(100% - 11vh);
-  height: calc(100vh - 13vh);
-  position: relative;
-  margin-left: 11vh;
-
+.hero {
+    width: 100%;
+    min-height: 70vh;
+    position: relative;
 }
 
 .hero img{
-    position: absolute;
-   width: 100%;
-   height: 100%;
-   object-fit: cover;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
    
 }
 
 .herotext {
-    position: absolute; 
-    top: 15vh;
-    left: 7vh;
-    z-index: 100;
-    color: #fcfeff;
+  position: absolute;
+  top: 15vh;
+  left: 7vh;
+  z-index: 3;
+  color: #fcfeff;
 
 
 }
 
 .herobox{
 
-  width: 100%;
-  height: 100%;
   position: absolute;
   inset: 0;
   background-color: black;
   opacity: 0.4;
+  z-index: 2;
   
 }
 
@@ -205,17 +214,10 @@ html,body{
     z-index: 100;
     color: #fcfeff;
 }
-.page2{
-
-    z-index: 5;
- width: calc(100% - 13vh);
-  /* position: fixed; */
-  margin-left: 11vh;
-  margin-top: 5vh;
-    padding-left: 40px; 
-  
-    
+.page2 {
+    margin-top: 40px;
 }
+
 .page2 .title1{
     font-size: 6vh;
     color: #fcfeff;
@@ -230,25 +232,26 @@ html,body{
     padding-top: 3vh;
     
 }
-.movie-list {
-  flex: 0 0 220px;     
-  display: flex;
-  justify-content: center;
+
+.movie-list-item{
+    min-width: 220px;
+    max-width: 220px;
+    flex-shrink: 0;
 }
 
 
 
 .movie-list-wrapper{
-   
-  display: flex;
-  gap: 20px;
-  overflow-x: auto;          
-  overflow-y: hidden;
-  scroll-behavior: smooth;
-  padding-bottom: 10px;
-  gap: 60px;
-  justify-content: center;
+    display: flex;
+    gap: 25px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    padding: 10px 20px;   /* add left & right spacing */
 }
+
+
+
 .movie-list-item {
   display: flex;
   flex-direction: column;
@@ -258,15 +261,14 @@ html,body{
 }
 
 .movie-img-box{
-   width: 220px;
-  height: 320px;          
-  border-radius: 14px;
-  overflow: hidden;
-  background-color: #1e1e2a;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+ width: 220px;
+   height: 320px;
+   border-radius: 14px;
+   overflow: hidden;
 } 
-.movie-img-list:hover{
-    transform: scale(1.05); 
+.movie-list-img:hover{
+    transform: scale(1.05);
+    transition: 0.3s ease; 
 }
 
 .movie-desc{
@@ -281,7 +283,7 @@ html,body{
 
 .movie-list-wrapper .movie-list-img{
     
-    object-fit: cover;
+    
     width: 100%;
     height: 100%;
     display: block;
@@ -329,14 +331,19 @@ html,body{
 }
  
 .container2{
-    width: calc(100% - 11vh);
+     /* width: 100%;
+    margin-left: 90px;
     min-height: 100vh;
-    margin-left: 11vh;
     margin-top: 8vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: var(--body-color);
+    background-color: var(--body-color); */
+
+    width: 100%;
+    margin-top: 8vh;
+
+
 }
 
 
