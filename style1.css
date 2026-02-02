@@ -7,7 +7,7 @@
 }
 html,body{
     height: 100%;
-    font-family: Gilroy;
+    font-family: sans-serif;
     background-color: #1e1e2a;
     
 
@@ -78,7 +78,15 @@ html,body{
 
 
 
+<<<<<<< HEAD
 .logo {
+=======
+.logo{
+    color:var(--text-color);
+    font-family: 'Gilroy';
+    padding-left: 7rem;
+    padding-top: 2px;
+>>>>>>> 99b27e448639909f38a6612590e89f965a3114eb
     font-size: 3rem;
     color: var(--text-color);
     font-weight: bold;
