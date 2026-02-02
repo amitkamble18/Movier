@@ -5,26 +5,48 @@ const IMAGE_URL = "https://image.tmdb.org/t/p/w500";
 
 async function fetchHollywoodMovies() {
   const res = await fetch(
-    `${BASE_URL}/movie/popular?api_key=${API_KEY}&language=en-US&page=1`
+    `${BASE_URL}/movie/popular?language=en-US&page=1`,
+    {
+      headers: {
+        Authorization: "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2OWI5NTljYmEzYjFmZDU2MWQwZTBhY2E0NTgzMmUzMyIsIm5iZiI6MTc3MDAzMDY1OS4zMzksInN1YiI6IjY5ODA4NjQzN2MzMjkzNGFhNWZkNDliYSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.jp7-O99cvVErlilhKS5Rc2ffMZG-OCDxqsWkLWr5sHM",
+        "Content-Type": "application/json;charset=utf-8"
+      }
+    }
   );
+
   const data = await res.json();
   renderMovies(data.results, "hollywoodMovies");
 }
 
-async function fetchBollywoodMovies() {
+
+async function fetchHollywoodMovies() {
   const res = await fetch(
-    `${BASE_URL}/discover/movie?api_key=${API_KEY}&with_original_language=hi&region=IN`
+    `${BASE_URL}/movie/popular?language=en-US&page=1`,
+    {
+      headers: {
+        Authorization: "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2OWI5NTljYmEzYjFmZDU2MWQwZTBhY2E0NTgzMmUzMyIsIm5iZiI6MTc3MDAzMDY1OS4zMzksInN1YiI6IjY5ODA4NjQzN2MzMjkzNGFhNWZkNDliYSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.jp7-O99cvVErlilhKS5Rc2ffMZG-OCDxqsWkLWr5sHM",
+        "Content-Type": "application/json;charset=utf-8"
+      }
+    }
   );
+
   const data = await res.json();
-  renderMovies(data.results, "bollywoodMovies");
+  renderMovies(data.results, "hollywoodMovies");
 }
 
-async function fetchSouthMovies() {
+async function fetchHollywoodMovies() {
   const res = await fetch(
-    `${BASE_URL}/discover/movie?api_key=${API_KEY}&with_original_language=ta`
+    `${BASE_URL}/movie/popular?language=en-US&page=1`,
+    {
+      headers: {
+        Authorization: "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2OWI5NTljYmEzYjFmZDU2MWQwZTBhY2E0NTgzMmUzMyIsIm5iZiI6MTc3MDAzMDY1OS4zMzksInN1YiI6IjY5ODA4NjQzN2MzMjkzNGFhNWZkNDliYSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.jp7-O99cvVErlilhKS5Rc2ffMZG-OCDxqsWkLWr5sHM",
+        "Content-Type": "application/json;charset=utf-8"
+      }
+    }
   );
+
   const data = await res.json();
-  renderMovies(data.results, "southMovies");
+  renderMovies(data.results, "hollywoodMovies");
 }
 
 
