@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Movier</title>
+  <link rel="icon" type="image/jpeg" href="source/icon.jpeg">
+  <link rel="stylesheet" href="/Movier/style1.css" />
+
+  <script src="/Movier/script.js" defer></script>
+
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+
+<div class="main">
+
+  <!-- TOP NAV -->
+  <div class="navhor">
+    <a href="index.html" class="logo">Movier</a>
+
+    <div class="navleft">
+      <div class="searchbox">
+        <input type="search" id="search-input" placeholder="search movie"/>
+      </div>
+
+      <a href="#" class="user">
+        <img class="user-img" src="source/user_icon.png" alt="user"/>
+      </a>
+    </div>
+  </div>
+
+  <!-- SIDEBAR -->
+  <div class="navvar">
+    <ul class="parent-icons">
+      <li>
+        <a href="#" class="nav-link">
+          <i class="bx bx-home"></i>
+          <span>Home</span>
+        </a>
+
+        <a href="#" class="nav-link">
+          <i class="bx bxs-hot"></i>
+          <span>Trending</span>
+        </a>
+
+        <a href="#" class="nav-link">
+          <i class="bx bx-compass"></i>
+          <span>Explore</span>
+        </a>
+
+        <a href="#" class="nav-link">
+          <i class="bx bx-tv"></i>
+          <span>Movie</span>
+        </a>
+
+        <a href="#" class="nav-link">
+          <i class="bx bx-heart"></i>
+          <span>Favorite</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- HERO -->
+  <div class="hero">
+    <img src="/Movier/source/heroimg.jpeg" alt="">
+    <div class="herobox"></div>
+
+    <div class="herotext">
+      <h1>Welcome to <span style="color: gold;">Movier</span> - Your Movie Ticket Partner</h1>
+      <h2>Bring Your Peaceful Stories To Life With Cinevision</h2>
+      <p>Going to the movies is a fun way to spend time with friends and family.</p>
+
+      <h2 class="book">
+        Book Now <i class="bx bx-right-arrow"></i>
+      </h2>
+    </div>
+  </div>
+
+  <!-- MOVIE LIST SECTION -->
+  <div class="page2">
+
+    <p class="title1">Find the latest movies</p>
+
+    <div class="movieContainer">
+      <h1 class="movie-title">Bollywood</h1>
+      <div class="movie-list-wrapper" id="bollywoodMovies"></div>
+    </div>
+
+    <h1 class="movie-title">Hollywood</h1>
+    <div class="movie-list-wrapper" id="hollywoodMovies">
+      <!-- your hollywood movie card -->
+    </div>
+
+    <h1 class="movie-title">South Indian</h1>
+    <div class="movie-list-wrapper" id="southMovies"></div>
+
+  </div>
+
+  <!-- BOOKING SECTION -->
+  <div class="container2">
+
+    <h1 class="movie-title">Book Tickets</h1>
+
+    <div class="booking-layout">
+
+      <!-- LEFT -->
+      <div class="movie-side">
+        <h2>Now Showing</h2>
+
+        <div class="movie-item active">
+          <img src="source/tere_ishq_mein.jpg" />
+          <span>Tere Ishq Mein</span>
+        </div>
+
+        <div class="movie-item">
+          <img src="source/coolie.jpg" />
+          <span>Coolie</span>
+        </div>
+
+        <div class="movie-item">
+          <img src="source/lost_bus.webp" />
+          <span>The Lost Bus</span>
+        </div>
+
+        <div class="movie-item">
+          <img src="source/dhadak.jpg" />
+          <span>Dhadak 2</span>
+        </div>
+
+      </div>
+
+      <!-- RIGHT -->
+      <div class="seat-side">
+        <div class="theatre">
+          <div class="screen">SCREEN</div>
+          <div class="seat-container"></div>
+        </div>
+
+        <div class="booking-info">
+          <p>Selected Seats <span id="seatCount">0</span></p>
+          <p>Total Price ₹<span id="totalPrice">0</span></p>
+          <button id="confirmBtn" disabled>Confirm Booking</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div> <!-- CLOSE MAIN -->
+
+</body>
+</html>
