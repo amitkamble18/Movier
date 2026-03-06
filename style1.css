@@ -19,6 +19,10 @@ overflow-x:hidden;
 --container-color:#2d2e37;
 --text-color:#fcfeff;
 }
+a{
+text-decoration:none;
+color:inherit;
+}
 
 /* MAIN */
 .main{
@@ -62,7 +66,8 @@ list-style:none;
 
 /* LOGO */
 .logo{
-color:var(--text-color);
+/* color:var(--text-color); */
+color: #ffa500;
 font-size:3rem;
 font-weight:bold;
 padding-left:7rem;
